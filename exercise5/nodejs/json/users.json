@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Matti Matikainen",
+            "address": "Matikaisentie 4",
+            "phone": "1234567890",
+            "email": "matti@matikainen.com" 
+        },
+        {
+            "id": "2",
+            "name": "Maija Meikalainen",
+            "address": "Meikalaisentie 11",
+            "phone": "1112223334",
+            "email": "maija@meikalainen.com" 
+        }
+    ]
+}

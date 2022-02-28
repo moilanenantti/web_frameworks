@@ -1,0 +1,185 @@
+@media (max-width: 1090px){
+    .uutinenMain{
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: white;
+        height: auto;
+        border-top: 1px solid black;
+    }
+
+    .uutinen{
+        cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    .teaserTitle{
+        font-family: Times, serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-top: 11px;
+        margin-bottom: 10px;
+    }
+
+    .teaserImage{
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .teaserContent{
+        padding-bottom: 1px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .teaserContentText{
+        font-weight: bold;
+        font-family: Times, serif;
+        font-size: 26px;
+    }
+
+
+    .teaserContentTitleBlue{
+        color: #214785;
+        font-weight: bold;
+        font-family: Times, serif;
+        font-size: 26px;
+    }
+
+    .teaserContentDivider{
+        font-weight: bold;
+        color: #214785;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .seuranta{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        width: 90px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-content: center;
+    }
+
+    @keyframes blink{
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+
+    .dot{
+        width: 14px;
+        height: 14px;
+        background-color: #a60000;
+        border-radius: 50%;
+        animation: blink 1s infinite;
+    }
+
+    .seurantaText{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #a60000;
+        font-size: 14px;
+    }
+
+    .subject{
+        font-size: 13px;
+    }
+}
+
+
+
+@media (min-width: 1090px){
+    .uutinenMain{
+        max-width: 700px;
+        display: block;
+        background-color: white;
+        height: auto;
+        border-top: 1px solid black;
+    }
+
+    .uutinen{
+        cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    .teaserTitle{
+        font-family: Times, serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-top: 11px;
+        margin-bottom: 10px;
+    }
+
+    .teaserImage{
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .teaserContent{
+        padding-bottom: 1px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .teaserContentText{
+        font-family: Times, serif;
+        font-weight: bold;
+        font-size: 29px;
+    }
+
+    .teaserContentTitleBlue{
+        color: #214785;
+        font-family: Times, serif;
+
+    }
+
+    .teaserContentDivider{
+        color: #214785;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .seuranta{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        width: 90px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-content: center;
+    }
+
+    @keyframes blink{
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+
+    .dot{
+        width: 14px;
+        height: 14px;
+        background-color: #a60000;
+        border-radius: 50%;
+        animation: blink 1s infinite;
+    }
+
+    .seurantaText{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #a60000;
+        font-size: 14px;
+    }  
+    
+    .subject{
+        font-size: 14px;
+    }
+}
+

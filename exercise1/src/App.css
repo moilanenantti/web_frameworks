@@ -1,0 +1,354 @@
+@media (max-width: 900px){
+  .App{
+    background-color: #e9eaed;
+  }
+  
+  .headerOut{
+    background-color: #00194C;
+    display: flex;
+    height: 70px;
+  }
+
+  .headerIn{
+    max-width: 960px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+  }
+  
+  .headerIn > .emptyMiddleHeader{
+    display: flex;
+    width: 20%
+  }
+  
+  .headerLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .headerLeftOptions{
+    visibility: hidden;
+  }
+
+  .headerRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300%;
+    justify-content: center;
+  }
+  
+  .headerLeft > .logo {
+    width: 0px;
+  }
+
+  .headerLeft > .logoSmall {
+    cursor: pointer;
+    -webkit-filter: invert(1);
+     filter: invert(1);
+    width: auto;
+    height: 56px;
+    object-position: -12px;
+  }
+  
+  .headerRight > .tilaa{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: #00194C;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .headerRight > .tilaa:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  
+  .kirjaudu{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .headerRight > .valikko{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .headerRight > .valikko > .threeLineBar{
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: 27px;
+    height: 27px;
+    margin: 7%;
+    margin-top: 9%;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .App{
+    background-color: #e9eaed;
+  }
+  
+  .headerOut{
+    background-color: #00194C;
+    display: flex;
+    height: 70px;
+  }
+
+  .headerIn{
+    max-width: 960px;
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+  
+  .headerIn > .emptyMiddleHeader{
+    display: flex;
+    width: 10%;
+  }
+  
+  .headerLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .headerLeftOptions{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .etusivu{
+    cursor: pointer;
+  }
+
+  .uutiset{
+    cursor: pointer;
+  }
+
+  .lehdet{
+    cursor: pointer;
+  }
+
+  .asiakaspalvelu{
+    cursor: pointer;
+
+  }
+
+  .headerRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .headerLeft > .logo {
+    width: 0px;
+  }
+
+  .headerLeft > .logoSmall {
+    cursor: pointer;
+    -webkit-filter: invert(1);
+     filter: invert(1);
+    width: auto;
+    height: 56px;
+    object-position: -12px;
+  }
+  
+  .headerRight > .tilaa{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: #00194C;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .headerRight > .tilaa:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  
+  .headerRight > .kirjaudu{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .headerRight > .valikko{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .headerRight > .valikko > .threeLineBar{
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: 27px;
+    height: 27px;
+    margin: 7%;
+    margin-top: 9%;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 1200px){
+  .App{
+    background-color: #e9eaed;
+  }
+  
+  .headerOut{
+    background-color: #00194C;
+    display: flex;
+    height: 70px;
+  }
+  
+  .headerIn{
+    max-width: 960px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: white;
+    margin-left: 10%;
+    justify-content: space-between;
+  }
+
+  .headerIn > .emptyMiddleHeader{
+    display: flex;
+    width: 10%
+  }
+
+  .headerLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .headerLeftOptions{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .etusivu{
+    cursor: pointer;
+  }
+
+  .uutiset{
+    cursor: pointer;
+  }
+
+  .lehdet{
+    cursor: pointer;
+  }
+
+  .asiakaspalvelu{
+    cursor: pointer;
+  }
+
+  .headerRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .headerLeft > .logo {
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: auto;
+    height: 25px;
+    margin-right: 1%;
+  }
+
+  .headerLeft > .logoSmall {
+    width: 0px;
+  }
+
+  .headerRight > .tilaa{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: #00194C;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+  .headerRight > .tilaa:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+
+  .headerRight > .kirjaudu{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .headerRight > .valikko{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .headerRight > .valikko > .threeLineBar{
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: 27px;
+    height: 27px;
+    margin: 7%;
+    margin-top: 9%;
+    margin-left: 10%;
+  }
+}

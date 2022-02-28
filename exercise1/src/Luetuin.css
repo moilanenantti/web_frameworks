@@ -1,0 +1,32 @@
+.luetuimmat1{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nro{
+    font-family: Times, serif;
+    font-weight: bold;
+    color: #49919e;
+    font-size: 33px;
+    margin-top: -3px;
+}
+
+.teksti{
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.luetuimmatSubject{
+    font-weight: bolder;
+}
+
+.luetuinBorder{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}

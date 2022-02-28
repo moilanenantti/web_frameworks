@@ -1,0 +1,31 @@
+.uusimmat1{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.klo{
+    font-family: Times, serif;
+    color: grey;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+.teksti{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.uusimmatSubject{
+    font-weight: bolder;
+}
+
+.uusinBorder{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
