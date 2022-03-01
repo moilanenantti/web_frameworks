@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import ProductView from './components/ProductView';
 import AdminView from './components/AdminView';
+import Cart from './components/Cart';
 
 // okei tätähän voi siis valtavasti vielä sieventää ja turhaa koodia on tässä ihan liikaa mutta harjoittelua tämä on ollut :D
 
@@ -16,8 +17,11 @@ function App() {
   const [modifiedProduct, setModifiedProduct] = useState('')
   const [ref, setRef] = useState(false)
   const [editorModeOn, setEditorMode] = useState(false);
-  const [cart, setCartItems ] = useState([]);
-  var [cartCount, setCartCount] = useState(0);
+  const [cartVisible, setCartVisible] = useState(false);
+  const [cartItems, getCartItems ] = useState([]);
+  const [addedCartItems, addCartItems] = useState([]);
+  const [itemId, deleteCartItem] = useState([]); // delete from cart by id
+  //const [totalSum, getTotalSum] = useState(''); // delete from cart by id
 
 // GET PRODUCT DATA //
   useEffect(() => {
@@ -116,30 +120,97 @@ function App() {
     }
   }
 
+// GET SHOPPING CART ITEMS
+  useEffect(() => {
+    const getData = async () => {
+      const results = await axios.get('http://localhost:8080/cart')
+      getCartItems(results.data);
+    }
+    getData();
+    //setTimeout(() => {refreshSum();}, 100);
+  }, [])
+  useEffect(() => {
+    getCartItems(cartItems);
+  }, [cartItems])
 
-  const setCart = (data) => {
-    setCartItems(data)
-    setCartCount(cartCount+1);
+  // GET SHOPPING CART TOTAL SUM
+  /*function refreshSum(){
+    const getData = async () => {
+      const results = await axios.get('http://localhost:8080/cart/sum')
+      getTotalSum(results.data);
+    }
+    getData();
   }
+  useEffect(() => {
+    getTotalSum(totalSum);
+  }, [totalSum])*/
 
 
-  function increaseCart(data){
-    console.log(data)
+  // ADD CART ITEMS //
+  const setAddedCartItem = (data) => {
+    addCartItems(data)
+ 
+    if (addedCartItems !== '') {
+        const addToCart = async () => {
+          let results = await axios.post('http://localhost:8080/cart', { addedCartItems })
+          getCartItems(results.data);
+        }
+      addToCart();
+      //setTimeout(() => {refreshSum();}, 100);
+    }
+  };
+  useEffect(() => {
+    getCartItems(cartItems);
+  }, [cartItems])
+
+  // DELETE CART ITEM //
+  const deleteFromCart = (index) => {
+    deleteCartItem(index)
   }
+  useEffect(() => {
+    if (itemId !== '') {
+        const cartDeletion = async () => {
+        let results = await axios.delete(`http://localhost:8080/cart/${itemId}`)
+        getCartItems(results.data);
+      }
+      cartDeletion();
+     // setTimeout(() => {refreshSum();}, 100);
+    }
+  }, [itemId])
 
 
+  let cartContent = '';
+  if( cartVisible == true ) {
+    cartContent = <Cart data={ cartItems } toggleCart = { cartVisibility } removeItem= { deleteFromCart } 
+    //getSum= { totalSum }
+    />;
+  }
+  function cartVisibility(){
+    setCartVisible(!cartVisible) 
+  }
   let allCategories = products;
-  let output = <ProductView data= { filteredResults } addToCart= { setCart } />;
-  if( editorModeOn == true ) {
-    output = <AdminView data={ filteredResults } deleteProduct={ deleteProduct } modifyProduct={ modifyProduct } addProduct={ addingProduct } />;
+  let output = <ProductView data= { filteredResults } addToCart= { setAddedCartItem } />;
+
+
+  if( editorModeOn == true && cartVisible == true ) {
+    setCartVisible(!cartVisible) 
+  } else if (editorModeOn == true) {
+    output = <AdminView data={ filteredResults }
+    deleteProduct={ deleteProduct }
+    modifyProduct={ modifyProduct }
+    addProduct={ addingProduct } />;
   }
 
 
   return (
     <div className="App">
-      <Header filterInput={ filterProducts } filterDropdown={ filterByCategory } categories={ allCategories } cartAmount= { cartCount }/>
-      
-      <button className="switch_mode" onClick={ () => setEditorMode(!editorModeOn) }>Admin switch</button>
+      <Header filterInput={ filterProducts }
+      filterDropdown={ filterByCategory }
+      categories={ allCategories }
+      cartAmount= { cartItems.length }
+      toggleCart = { cartVisibility } />
+      { cartContent }
+      <button className="switch_mode" onClick={ () => setEditorMode(!editorModeOn)  }>Admin switch</button>
       { output }
     </div>
   );

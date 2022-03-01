@@ -19,7 +19,7 @@ export default function ProductView( { data, addToCart } ) {
                 </span>
               </div>
             <div className="price">${data.price}</div>
-          <button className="add_to_cart" onClick={() => addToCart( {data} )} >Add to cart</button>
+          <button className="add_to_cart" onClick={() => addToCart(data)} >Add to cart</button>
         </div>
       )}
     </div>

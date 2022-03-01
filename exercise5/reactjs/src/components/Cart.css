@@ -1,0 +1,83 @@
+.cart {
+    position: fixed;
+    top: 55px;
+    right: 5px;
+    padding: 5px;
+}
+
+.cart_box {
+    background-color: rgb(238, 236, 236);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+.Header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    font-weight: bold;
+}
+
+.close_btn {
+    cursor: pointer;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;   
+    border-bottom: 1px solid black; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.thumbnail {
+    height: 80px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.inner_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.Secinner_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.desc {
+    overflow: hidden;
+    height: 45px;
+}
+
+.bolder {
+    font-weight: 600;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.remove {
+    cursor: pointer;
+    height: 20px;
+    width: auto;
+    font-weight: 600;
+}

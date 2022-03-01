@@ -11,11 +11,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const products = require('./routes/products');
 const users = require('./routes/users');
 const invoices = require('./routes/invoices');
+const cart = require('./routes/cart');
 
 app.use('/products', products)
 app.use('/users', users)
 app.use('/invoices', invoices)
-app.use('/images', express.static('./public/images'));
+app.use('/images', express.static('./public/images'))
+app.use('/cart', cart)
 
 // here port is absolute since some product
 //images rely on the localhost/8080 path!
